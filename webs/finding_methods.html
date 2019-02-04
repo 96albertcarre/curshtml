@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>finding_methods</title>
+	<style>
+	.second {
+	  background-color: red;	  
+	} 
+	</style>
+	<script type="text/javascript">
+		window.onload = function () {
+ 		primer=("FIRST")
+ 		segon=("SECOND")
+	 	document.getElementById("first").innerHTML = primer;
+	 	document.getElementsByClassName("second")[0].innerHTML =segon ;
+	 	document.getElementsByClassName("second")[1].innerHTML =segon ;
+
+ 		}
+	</script>
+</head>
+<body>
+	<div style= "background-color:yellow">	
+		<p id="first"></p>
+	</div>
+	<div>
+		<p class="second"></p>
+	</div>
+	<div>
+		<p class="second"></p>
+	</div>
+	<div style= "background-color:green">
+		<p>LAST</p>
+	</div>
+	
+</html>
