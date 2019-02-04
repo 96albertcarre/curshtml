@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MONOS</title>
+	<style>
+		#grid-cuadricula{
+			display:grid;
+			grid-template-columns: 25% 25% 25% 25%;
+			grid-template-rows: 25% 25% 25% 25%;
+			grid-column-start:2;
+			grid-row-start:2;
+			grid-column-start:3;
+			grid-row-start:3;
+		}
+		#grid-cuadricula img{
+			width:100px;
+			height:100px;
+		}
+		img:hover{
+ 		   -webkit-filter: grayscale(100%); 
+  			filter: grayscale(100%);
+		}		
+	</style>
+</head>
+<body>
+	
+	<div id="grid-cuadricula">
+
+		<p title="I'm a monkey"><img src="im1.jpg"></p>
+		<p title="I'm a monkey2"><img src="im2.jpg" ></p>
+		<p title="I'm a monkey2"><img src="im3.jpg" ></p>
+		<p title="I'm a monkey 4"><img src="im4.jpg"></p>	
+	</div>
+	
+
+</body>
+</html>
