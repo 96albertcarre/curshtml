@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>clock</title>
+	<style>
+	#clok {
+	 color: tomato;
+	 font-size: 80px;	   /* Safari 7.0+ */
+        
+	} 
+	body{
+		height: 100vh;
+
+		display: flex;
+      	justify-content: center;
+      	align-items: center;
+	}
+	</style>
+	<script>
+	window.onload = function () {
+		var s = 0;
+		var m = 0;
+			function temps(){
+				console.log("Ha passat 1 segon");
+				s++;
+
+				if(s<60){
+				s++;
+				}
+				if(s==60){
+					s=0;
+					m++;
+				}
+				if(m==60){
+					m=0;
+				}
+				var mostrar=(m+":"+s)
+				document.getElementById("clok").innerHTML = mostrar;
+			}
+
+
+			setInterval(temps,1000);								
+								
+		
+	}
+	</script>
+</head>
+<body>
+	<p id="clok"></p>
+</body>
+</html>
