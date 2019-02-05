@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CARROUSEL
+	</title>
+	<style>
+		#IM1{
+			width: 100vw;
+			height: 100vh;
+
+			background-size:100% 100%;
+		}
+		#IM2{
+			width: 100vw;
+			height: 100vh;
+			background-size:100% 100%;
+		}
+		#IM3{
+			width: 100vw;
+			height: 100vh;
+			background-size:100% 100%;
+		}
+	</style>
+	<script>
+	window.onload = function () {
+		var n=0;	
+		
+			function temps(){
+				n=n+1;	
+		
+
+			if(n==1){
+				document.getElementById("IM1").style.display="block";
+				document.getElementById("IM2").style.display="none";
+				document.getElementById("IM3").style.display="none";
+			}
+
+			if(n==2){
+				document.getElementById("IM2").style.display="block";
+				document.getElementById("IM1").style.display="none";
+				document.getElementById("IM3").style.display="none";
+			}
+
+			if(n==3){
+				document.getElementById("IM3").style.display="block";
+				document.getElementById("IM1").style.display="none";
+				document.getElementById("IM2").style.display="none";
+				n=0;
+			}
+		}
+
+		setInterval(temps,2000);			
+				
+	
+	}
+
+	</script>
+	</head>
+	<body>
+		<div id="IM1">
+			<p><img src="red.png"></p>
+		</div>
+		<div id="IM2">
+			<p><img src="blue.png"></p>
+		</div>
+		<div id="IM3">
+			<p><img src="green.png"></p>
+		</div>
+	</body>
+</html>
