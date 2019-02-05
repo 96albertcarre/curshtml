@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MIX</title>
+	<style>
+	html, body{
+		margin: 0;
+		padding: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: lightyellow;
+	}
+	header,footer,aside{
+		
+		width:100%;
+		overflow: hidden;
+
+
+	
+	}
+	
+	header{
+		height: 20%;
+		display: flex;
+		justify-content: end;
+     	align-items: center;	
+     
+	}
+	aside{
+		height: 60%;
+		
+	}
+	footer{
+		height: 20%;
+		background-color: navy;
+		position: absolute;
+		bottom: 0;
+	}
+	#clok {
+	 	color: tomato;
+	 	font-size: 50px;
+    }
+    #hola{
+    	color: darkslategrey;
+    	font-size:35px;
+    	display: flex;
+    	justify-content: center;
+     	align-items: center;	
+    }
+	</style>
+	<script>
+	window.onload = function () {
+			
+		
+		setInterval(temps2s,2000);
+		setInterval(temps1s,1000);	
+		
+		nombre = document.getElementById("a").value;
+	 	mostrar=("benvigut"+' '+nombre)
+	 	document.getElementById("hola").innerHTML = mostrar;
+	 	
+	 	document.getElementById("a").oninput=function(){
+	 		nombre = document.getElementById("a").value;
+	 		mostrar=("benvigut"+' '+nombre);
+	 		document.getElementById("hola").innerHTML = mostrar;
+	 	}
+
+	}
+	var n=0;
+
+				var s = 0;
+				var m = 0;
+			function temps2s(){
+				n=n+1;	
+
+			if(n==1){
+				document.getElementById("IM1").style.display="block";
+				document.getElementById("IM2").style.display="none";
+				document.getElementById("IM3").style.display="none";
+			}
+
+			if(n==2){
+				document.getElementById("IM2").style.display="block";
+				document.getElementById("IM1").style.display="none";
+				document.getElementById("IM3").style.display="none";
+			}
+
+			if(n==3){
+				document.getElementById("IM3").style.display="block";
+				document.getElementById("IM1").style.display="none";
+				document.getElementById("IM2").style.display="none";
+				n=0;
+			}
+			}
+			function temps1s(){
+				console.log("Ha passat 1 segon");
+				s++;
+
+				if(s<60){
+				s++;
+				}
+				if(s==60){
+					s=0;
+					m++;
+				}
+				if(m==60){
+					m=0;
+				}
+				var mostrar=(m+":"+s)
+				document.getElementById("clok").innerHTML = mostrar;
+			}
+	</script>
+
+</head>
+<body>
+<header>
+		<div id="IM1">
+			<p><img src="red.png"></p>
+		</div>
+		<div id="IM2">
+			<p><img src="blue.png"></p>
+		</div>
+		<div id="IM3">
+			<p><img src="green.png"></p>
+		</div>
+		<div>
+		<p id="clok"></p>
+</header>
+<main></main>
+<aside>
+	<p id="hola"></p>
+	 <input id="a" type="text" >
+</aside>
+<footer></footer>
+</body>
+</html>
