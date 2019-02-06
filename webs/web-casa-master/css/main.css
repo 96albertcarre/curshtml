@@ -1,0 +1,44 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+}
+header,table,footer{
+	width:100%;
+	overflow: hidden;
+}
+table{
+	border-color: red;
+	font-size: 20px;
+}
+body{
+	background-color: lightcyan;
+}
+
+
+footer{
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    background-color: white;
+}
+
+#UPC{
+	width:40px;
+    height:100px;
+    display: flex;
+    justify-content: end;
+}
+
+#titol{	
+	color: rgb(0,100,255);
+	font-style: italic;
+	font-family: 'Roboto', sans-serif;
+	font-size:40px;	
+	display: -webkit-flex; /* Safari */
+ 	-webkit-align-items: center;
+}
+
